@@ -6,7 +6,7 @@ ___
 [] doubly linked list
 [] array list
 [] hashmap
-[] trie
+[x] trie
 [] array buffer
 [] binary search
 [] quick sort
