@@ -5,8 +5,11 @@ ___
 [x] singly linked list
 [] doubly linked list
 [] array list
-[] hashmap
+[x] hashmap
 [x] trie
+[] stack
+[] queue
+[] heap
 [] array buffer
 [] binary search
 [] quick sort
