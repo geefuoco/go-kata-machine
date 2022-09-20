@@ -9,7 +9,7 @@ ___
 [x] trie
 [] stack
 [] queue
-[] heap
+[x] heap
 [] array buffer
 [] binary search
 [] quick sort
