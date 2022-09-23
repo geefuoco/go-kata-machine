@@ -11,9 +11,9 @@ ___
 [x] queue
 [x] heap
 [] array buffer
-[] binary search
-[] quick sort
-[] merge sort
+[x] binary search
+[x] quick sort
+[x] merge sort
 [] crystal ball
 
 
