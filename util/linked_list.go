@@ -7,11 +7,35 @@ type LinkedList[T any] struct {
   length uint
 }
 
+func (l *LinkedList[T]) Append(val T) {
+  l.append(&Node[T]{Val: val, Next: nil, Prev: nil})
+}
+
+func (l *LinkedList[T]) Prepend(val T) {
+  l.prepend(&Node[T]{Val: val, Next: nil, Prev: nil})
+}
+
+func (l *LinkedList[T]) Get(idx uint) T {
+  return l.get(idx).Val
+}
+
+func (l *LinkedList[T]) InsertAfter(idx uint, val T) {
+  l.insertAfter(idx, &Node[T]{Val: val})
+}
+
+func (l *LinkedList[T]) RemoveAt(idx uint) T {
+  return l.removeAt(idx).Val
+}
+
+func (l *LinkedList[T]) Pop() T {
+  return l.removeAt(l.length-1).Val
+}
+
 func NewLinkedList[T any]() *LinkedList[T] {
   return &LinkedList[T]{nil, nil, 0}
 }
 
-func (l *LinkedList[T]) Append(n *Node[T]) {
+func (l *LinkedList[T]) append(n *Node[T]) {
   if l.head == nil {
     l.head = n
     l.tail = l.head
@@ -22,7 +46,7 @@ func (l *LinkedList[T]) Append(n *Node[T]) {
   l.length++
 }
 
-func (l *LinkedList[T]) Prepend(n *Node[T]) {
+func (l *LinkedList[T]) prepend(n *Node[T]) {
   if l.head != nil {
     temp := l.head
     l.head = n;
@@ -34,12 +58,8 @@ func (l *LinkedList[T]) Prepend(n *Node[T]) {
   l.length++
 }
 
-func (l *LinkedList[T]) Get(idx uint) *Node[T] {
-  return l.get(idx)
-}
-
 //Singly linked list can only insert after
-func (l *LinkedList[T]) InsertAfter(idx uint, node *Node[T]) {
+func (l *LinkedList[T]) insertAfter(idx uint, node *Node[T]) {
   old_node := l.get(idx)
   temp := old_node.Next
   old_node.Next = node
@@ -47,7 +67,7 @@ func (l *LinkedList[T]) InsertAfter(idx uint, node *Node[T]) {
   l.length++
 }
 
-func (l *LinkedList[T]) RemoveAt(idx uint) *Node[T] {
+func (l *LinkedList[T]) removeAt(idx uint) *Node[T] {
   if idx == 0 {
     out := l.head
     l.head = l.head.Next
@@ -73,9 +93,6 @@ func (l *LinkedList[T]) RemoveAt(idx uint) *Node[T] {
   return out 
 }
 
-func (l *LinkedList[T]) Pop() *Node[T] {
-  return l.RemoveAt(l.length-1)
-}
 
 func (l *LinkedList[T]) get(idx uint) *Node[T] {
   if idx >= l.length {
