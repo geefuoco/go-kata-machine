@@ -3,7 +3,7 @@ ___
 
 ### Checklist
 [x] singly linked list
-[] doubly linked list
+[x] doubly linked list
 [] array list
 [x] hashmap
 [x] trie
