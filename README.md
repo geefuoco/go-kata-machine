@@ -7,12 +7,13 @@ ___
 [] array list
 [x] hashmap
 [x] trie
-[] stack
-[] queue
+[x] stack
+[x] queue
 [x] heap
 [] array buffer
 [] binary search
 [] quick sort
+[] merge sort
 [] crystal ball
 
 
