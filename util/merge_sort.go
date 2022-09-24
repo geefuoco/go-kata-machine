@@ -22,7 +22,7 @@ func mergeHalves(arr []int, leftStart, rightEnd int, temp *[]int){
 
   left:= leftStart
   right := rightStart
-  index := left
+  index := 0
 
   for left <= leftEnd && right <= rightEnd {
     if arr[left] <= arr[right] {
@@ -48,6 +48,6 @@ func mergeHalves(arr []int, leftStart, rightEnd int, temp *[]int){
   }
 
   for i:=0; i < size; i++ {
-    arr[i] = (*temp)[i]
+    arr[leftStart +i] = (*temp)[i]
   }
 }
