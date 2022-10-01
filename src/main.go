@@ -30,7 +30,7 @@ func generateKatas() {
   crashOnError(err)
   err = copyDir(filepath.Join(ROOT, "templates"), KATA)
   crashOnError(err)
-  err = copyDir(filepath.Join(ROOT, "tests_templates"), TESTS)
+  err = copyDir(filepath.Join(ROOT, "test_templates"), TESTS)
   crashOnError(err)
   fmt.Println("Created katas directory")
   crashOnError(err)
