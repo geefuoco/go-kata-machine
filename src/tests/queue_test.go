@@ -2,7 +2,7 @@ package tests
 
 import (
   "testing"
-  "github.com/geefuoco/go-kata-machine/util"
+  "github.com/geefuoco/go-kata-machine/src/util"
   "github.com/stretchr/testify/assert"
 )
 
