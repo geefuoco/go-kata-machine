@@ -39,3 +39,8 @@ After implementing, you can run against test cases `go test ./katas/tests/<filen
 - largest component (graph)
 
 
+### Having Trouble ? 
+
+In order to get the best practice out of the katas, you should try and solve each solution on your own. 
+
+If you get stuck there are implemented solutions inside of the `util` folder
