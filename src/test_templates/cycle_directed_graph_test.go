@@ -13,12 +13,12 @@ func TestHasCycle(t *testing.T) {
     'c': {'a', 'e'},
   }
 
-  assert.Equal(t, katas.HasCycle(graph), true)
+  assert.Equal(t, true, katas.HasCycle(graph))
 
   acyclic := map[rune][]rune{
     'a': {'b', 'c'},
     'b': {'d', 'e'},
   }
-  assert.Equal(t, katas.HasCycle(acyclic), false)
+  assert.Equal(t, false, katas.HasCycle(acyclic))
   
 }
