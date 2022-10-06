@@ -7,7 +7,7 @@ import (
 )
 
 func TestHashTable(t *testing.T){
-  hash := katas.NewHashTable[string]()
+  hash := katas.NewHashTable[string, string]()
   hash.Insert("mario", "kart")
   hash.Insert("tokyo", "drift")
   assert.Equal(t, "kart", hash.Get("mario"))
@@ -16,10 +16,10 @@ func TestHashTable(t *testing.T){
   assert.Equal(t, "", hash.Get("mario"))
   hash.Delete("tokyo")
   assert.Equal(t, "", hash.Get("tokyo"))
-  nums := katas.NewHashTable[int]()
-  nums.Insert("one", 1)
-  nums.Insert("two", 2)
-  assert.Equal(t, 1, nums.Get("one"))
-  assert.Equal(t, 2, nums.Get("two"))
-  assert.Equal(t, false, nums.Has("twenty"))
+  nums := katas.NewHashTable[int, int]()
+  nums.Insert(10, 1)
+  nums.Insert(20, 2)
+  assert.Equal(t, 1, nums.Get(10))
+  assert.Equal(t, 2, nums.Get(20))
+  assert.Equal(t, false, nums.Has(30))
 }
