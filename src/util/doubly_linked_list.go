@@ -69,7 +69,7 @@ func (d *DoublyLinkedList[T]) RemoveAt(idx int) T{
   return node.Val
 }
 
-func (d *DoublyLinkedList[T]) Deque(idx int) T {
+func (d *DoublyLinkedList[T]) Deque() T {
   return d.RemoveAt(0)
 }
 

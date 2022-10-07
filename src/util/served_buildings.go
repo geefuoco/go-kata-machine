@@ -7,9 +7,6 @@ func ServedBuildings(buildings, routerLocations, routerRanges []int) int {
     routerRange := routerRanges[i]
 
     for j := range buildings {
-      if _, ok := serveCounts[j]; !ok {
-        serveCounts[j]=0
-      }
       if j >= router-routerRange && j <= router+routerRange {
         serveCounts[j]++
       }

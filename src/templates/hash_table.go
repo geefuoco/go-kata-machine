@@ -7,27 +7,27 @@ type Key interface {
 }
 
 
-type HashTable[V any] struct {
+type HashTable[K Key, V any] struct {
 }
 
 
-func NewHashTable[V any]() *HashTable[V]{
+func NewHashTable[K Key, V any]() *HashTable[K, V]{
   return nil
 }
 
-func (h *HashTable[V]) Insert(key string, value V) {
+func (h *HashTable[K, V]) Insert(key K, value V) {
 }
 
-func (h *HashTable[V]) Has(key string) bool {
+func (h *HashTable[K, V]) Has(key K) bool {
   return false
 }
 
-func (h *HashTable[V]) Get(key string) V{
+func (h *HashTable[K, V]) Get(key K) V{
   var out V
   return out
 }
 
-func (h *HashTable[V]) Delete(key string) V{
+func (h *HashTable[K, V]) Delete(key K) V{
   var out V
   return out
 }
