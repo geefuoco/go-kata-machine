@@ -21,7 +21,7 @@ func (d *DoublyLinkedList[T]) RemoveAt(idx int) T{
   return out
 }
 
-func (d *DoublyLinkedList[T]) Deque(idx int) T {
+func (d *DoublyLinkedList[T]) Deque() T {
   var out T
   return out
 }
